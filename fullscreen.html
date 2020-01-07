@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<button onclick="fs()">fullscreen+landscape</button>
+	<button onclick="exitFs()">exit fullscreen</button>
+	<script>
+		function fs() {
+			document.getElementsByTagName("body")[0].requestFullscreen()
+				.then(() => window.screen.orientation.lock("landscape"))
+		}
+		function exitFs(){
+			if(document.fullscreen){
+				document.exitFullscreen()
+			}
+		}
+	</script>
+	<style>
+		
+	</style>
+
+</body>
+
+</html>
